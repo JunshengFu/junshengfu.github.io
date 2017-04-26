@@ -3117,11 +3117,14 @@
 		/* Footer */
 
 			#footer .copyright li {
-				border-left-width: 0;
+				border-left-width: 0; 
 				display: block;
-				line-height: 2.25em;
+				line-height: 0m; /*2.25em;*/
 				margin-left: 0;
 				padding-left: 0;
 			}
 
 	}
+.listItem {
+list-style: none;
+}
