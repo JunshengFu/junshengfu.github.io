@@ -1,38 +1,34 @@
 [
   {
-    "date": "2026",
-    "text": "Opening keynote at the ECCV WMEAI Workshop: ‘What Should a World Model Represent in Autonomous Driving?’"
+    "date": "2026-11",
+    "text": "Host joint Master Thesis projects together with University of Cambridge, TUM, and KTH in the topics of 3D grounded world model."
   },
   {
-    "date": "2026",
+    "date": "2026-10",
     "text": "Beyond Chamfer Distance: Granular Order-Aware Evaluation Metric for Online Mapping — NeurIPS 2026."
   },
   {
-    "date": "2026",
-    "text": "OpenCVL: An Open, Diverse, and Large-Scale Dataset for Fine-Grained Cross-View Localization — ECCV 2026."
+    "date": "2026-09",
+    "text": "Gave an opening keynote at the ECCV WMEAI Workshop: “What Should a World Model Represent in Autonomous Driving?”"
   },
   {
-    "date": "2026",
-    "text": "QueryOcc: Query-Based Self-Supervision for 3D Semantic Occupancy — CVPR 2026."
+    "date": "2026-09",
+    "text": "OpenCVL: An Open, Diverse, and Large-Scale Dataset for Fine-Grained Cross-View Localization — is presented as a spotlight in ECCV 2026."
   },
   {
-    "date": "2026",
-    "text": "Invited talk at TU Delft’s Intelligent Vehicles Lab: ‘Engineering Physical AI for Autonomous Driving.’"
+    "date": "2026-06",
+    "text": "QueryOcc: Query-Based Self-Supervision for 3D Semantic Occupancy — is presented in CVPR 2026."
   },
   {
-    "date": "2026",
-    "text": "B2F-Map: Crowd-Sourced Mapping with Bayesian B-Spline Fusion — ICRA 2026."
+    "date": "2026-04",
+    "text": "Invited talk at TU Delft’s Intelligent Vehicles Lab: “Engineering Physical AI for Autonomous Driving.”"
   },
   {
-    "date": "2025",
-    "text": "Began co-supervising the Safe-VLA industrial Ph.D. project at Chalmers, connecting linguistic reasoning with safe trajectory planning for autonomous driving."
+    "date": "2026-06",
+    "text": "B2F-Map: Crowd-Sourced Mapping with Bayesian B-Spline Fusion — is presented in ICRA 2026."
   },
   {
-    "date": "2025",
-    "text": "Began co-supervising a WASP industrial postdoctoral project with Linköping University on fusing local crowdsourced maps into a global HD map."
-  },
-  {
-    "date": "2024",
-    "text": "Localization Is All You Evaluate: Data Leakage in Online Mapping Datasets and How to Fix It — CVPR 2024."
+    "date": "2026-06",
+    "text": "Safe-VLA project got funded by Vinnova FFI, and this project will host an industrial PhD student in collaboration between Zenseact and Chalmers."
   }
 ]

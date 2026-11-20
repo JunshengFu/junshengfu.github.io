@@ -10,19 +10,20 @@ Edit `_data/news.json` and add an entry:
 
 ```json
 {
-	"date": "2026-10-07",
+	"date": "2026-10",
 	"text": "Your update goes here.",
 	"url": "https://example.com/your-paper"
 }
 ```
 
 - `date`: `YYYY`, `YYYY-MM`, or `YYYY-MM-DD`. Only use known date precision.
+- The page displays these as `2026`, `Oct 2026`, or `Oct 7, 2026`, respectively.
 - `text`: plain text, not HTML.
 - `url`: optional complete HTTP or HTTPS link. Omit the field for unlinked news.
 - Separate entries with commas; JSON does not allow trailing commas.
 - Entries are sorted newest first. Equal dates retain their order in the file.
 	Year-only entries sort as January 1; this is a sorting convention, not a claim
-	about the actual event date. The page still displays only the year.
+	about the actual event date.
 - The first five entries are visible; older entries use a native All news
 	disclosure, which also works without JavaScript.
 
