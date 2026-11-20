@@ -37,15 +37,25 @@ def render_news(items):
         text = item.get("text")
         if not isinstance(text, str) or not text.strip():
             raise ValueError("Every news item needs non-empty text.")
-        content = escape(text)
         url = item.get("url")
+        link_text = item.get("link_text")
+        content = escape(text)
+        if link_text is not None and url is None:
+            raise ValueError("News link text requires a URL.")
         if url is not None:
             if not isinstance(url, str):
                 raise ValueError("News URLs must be strings.")
             target = urlsplit(url)
             if target.scheme not in ("http", "https") or not target.netloc or any(character.isspace() for character in url):
                 raise ValueError("News URLs must be complete HTTP or HTTPS links.")
-            content = f'<a href="{escape(url, quote=True)}">{content}</a>'
+            href = escape(url, quote=True)
+            if link_text is None:
+                content = f'<a href="{href}">{content}</a>'
+            else:
+                if not isinstance(link_text, str) or not link_text.strip() or text.count(link_text) != 1:
+                    raise ValueError("News link text must appear exactly once in the news text.")
+                before, _, after = text.partition(link_text)
+                content = f'{escape(before)}<a href="{href}">{escape(link_text)}</a>{escape(after)}'
         row = f'<li><time datetime="{escape(item["date"], quote=True)}">{label}</time><p>{content}</p></li>'
         ordered.append((parsed, row))
     ordered.sort(key=lambda entry: entry[0], reverse=True)

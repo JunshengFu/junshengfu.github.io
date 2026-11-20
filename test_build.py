@@ -40,6 +40,35 @@ class NewsTests(unittest.TestCase):
             {"date": "2026", "text": "News", "url": "https://example.com/?a=1&b=2"}
         ]))
 
+    def test_partial_news_link(self):
+        result = render_news([{
+            "date": "2026-09",
+            "text": "At the ECCV WMEAI Workshop: keynote.",
+            "url": "https://example.com/workshop",
+            "link_text": "WMEAI Workshop",
+        }])
+        self.assertIn(
+            'At the ECCV <a href="https://example.com/workshop">WMEAI Workshop</a>: keynote.',
+            result,
+        )
+        for text, news_text in (
+            ("missing", "WMEAI Workshop"),
+            ("WMEAI Workshop", "WMEAI Workshop and WMEAI Workshop"),
+        ):
+            with self.subTest(text=text), self.assertRaises(ValueError):
+                render_news([{
+                    "date": "2026",
+                    "text": news_text,
+                    "url": "https://example.com/workshop",
+                    "link_text": text,
+                }])
+        with self.assertRaises(ValueError):
+            render_news([{
+                "date": "2026",
+                "text": "WMEAI Workshop",
+                "link_text": "WMEAI Workshop",
+            }])
+
     def test_empty_and_invalid_content(self):
         self.assertIn("Updates coming soon", render_news([]))
         self.assertNotIn("<details", render_news([{"date": "2026", "text": "News"}]))

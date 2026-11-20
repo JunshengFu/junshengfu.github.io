@@ -12,7 +12,8 @@ Edit `_data/news.json` and add an entry:
 {
 	"date": "2026-10",
 	"text": "Your update goes here.",
-	"url": "https://example.com/your-paper"
+	"url": "https://example.com/your-paper",
+	"link_text": "text to link"
 }
 ```
 
@@ -20,6 +21,8 @@ Edit `_data/news.json` and add an entry:
 - The page displays these as `2026`, `Oct 2026`, or `Oct 7, 2026`, respectively.
 - `text`: plain text, not HTML.
 - `url`: optional complete HTTP or HTTPS link. Omit the field for unlinked news.
+  By default, the whole news text is linked; add `link_text` to link only that
+  exact phrase, which must appear once in `text`.
 - Separate entries with commas; JSON does not allow trailing commas.
 - Entries are sorted newest first. Equal dates retain their order in the file.
 	Year-only entries sort as January 1; this is a sorting convention, not a claim
